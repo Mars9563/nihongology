@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nihongology</title>
+    <title>Nihongology - Learn Japanese</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Nihongology</h1>
-    <h2>Welcome to Nihongology</h2>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nihongology</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#kana">Kana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kanji">Kanji</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vocab">Vocabulary</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>Welcome to Nihongology</h1>
+            <p>Your journey to mastering Japanese starts here.</p>
+            <a href="#kana" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Kana Section -->
+    <section id="kana" class="container section-card text-center">
+        <h2>Learn Kana</h2>
+        <p>Master Hiragana and Katakana with interactive exercises.</p>
+    </section>
+
+    <!-- Kanji Section -->
+    <section id="kanji" class="container section-card text-center">
+        <h2>Learn Kanji</h2>
+        <p>Understand and memorize Kanji effectively.</p>
+    </section>
+
+    <!-- Vocabulary Section -->
+    <section id="vocab" class="container section-card text-center">
+        <h2>Expand Your Vocabulary</h2>
+        <p>Improve your Japanese with essential words and phrases.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3 bg-dark text-white">
+        <p>&copy; 2025 Nihongology. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
