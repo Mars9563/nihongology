@@ -1,0 +1,646 @@
+[
+    {
+        "character": "あ",
+        "romaji": "a",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/あ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=a&tl=ja"
+    },
+    {
+        "character": "い",
+        "romaji": "i",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/い.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=i&tl=ja"
+    },
+    {
+        "character": "う",
+        "romaji": "u",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/う.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=u&tl=ja"
+    },
+    {
+        "character": "え",
+        "romaji": "e",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/え.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=e&tl=ja"
+    },
+    {
+        "character": "お",
+        "romaji": "o",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/お.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=o&tl=ja"
+    },
+    {
+        "character": "か",
+        "romaji": "ka",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/か.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ka&tl=ja"
+    },
+    {
+        "character": "き",
+        "romaji": "ki",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/き.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ki&tl=ja"
+    },
+    {
+        "character": "く",
+        "romaji": "ku",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/く.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ku&tl=ja"
+    },
+    {
+        "character": "け",
+        "romaji": "ke",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/け.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ke&tl=ja"
+    },
+    {
+        "character": "こ",
+        "romaji": "ko",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/こ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ko&tl=ja"
+    },
+    {
+        "character": "さ",
+        "romaji": "sa",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/さ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=sa&tl=ja"
+    },
+    {
+        "character": "し",
+        "romaji": "shi",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/し.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=shi&tl=ja"
+    },
+    {
+        "character": "す",
+        "romaji": "su",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/す.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=su&tl=ja"
+    },
+    {
+        "character": "せ",
+        "romaji": "se",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/せ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=se&tl=ja"
+    },
+    {
+        "character": "そ",
+        "romaji": "so",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/そ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=so&tl=ja"
+    },
+    {
+        "character": "た",
+        "romaji": "ta",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/た.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ta&tl=ja"
+    },
+    {
+        "character": "ち",
+        "romaji": "chi",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ち.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=chi&tl=ja"
+    },
+    {
+        "character": "つ",
+        "romaji": "tsu",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/つ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=tsu&tl=ja"
+    },
+    {
+        "character": "て",
+        "romaji": "te",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/て.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=te&tl=ja"
+    },
+    {
+        "character": "と",
+        "romaji": "to",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/と.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=to&tl=ja"
+    },
+    {
+        "character": "な",
+        "romaji": "na",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/な.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=na&tl=ja"
+    },
+    {
+        "character": "に",
+        "romaji": "ni",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/に.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ni&tl=ja"
+    },
+    {
+        "character": "ぬ",
+        "romaji": "nu",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ぬ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=nu&tl=ja"
+    },
+    {
+        "character": "ね",
+        "romaji": "ne",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ね.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ne&tl=ja"
+    },
+    {
+        "character": "の",
+        "romaji": "no",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/の.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=no&tl=ja"
+    },
+    {
+        "character": "は",
+        "romaji": "ha",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/は.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ha&tl=ja"
+    },
+    {
+        "character": "ひ",
+        "romaji": "hi",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ひ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=hi&tl=ja"
+    },
+    {
+        "character": "ふ",
+        "romaji": "fu",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ふ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=fu&tl=ja"
+    },
+    {
+        "character": "へ",
+        "romaji": "he",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/へ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=he&tl=ja"
+    },
+    {
+        "character": "ほ",
+        "romaji": "ho",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ほ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ho&tl=ja"
+    },
+    {
+        "character": "ま",
+        "romaji": "ma",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ま.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ma&tl=ja"
+    },
+    {
+        "character": "み",
+        "romaji": "mi",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/み.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mi&tl=ja"
+    },
+    {
+        "character": "む",
+        "romaji": "mu",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/む.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mu&tl=ja"
+    },
+    {
+        "character": "め",
+        "romaji": "me",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/め.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=me&tl=ja"
+    },
+    {
+        "character": "も",
+        "romaji": "mo",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/も.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mo&tl=ja"
+    },
+    {
+        "character": "や",
+        "romaji": "ya",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/や.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ya&tl=ja"
+    },
+    {
+        "character": "ゆ",
+        "romaji": "yu",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ゆ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=yu&tl=ja"
+    },
+    {
+        "character": "よ",
+        "romaji": "yo",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/よ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=yo&tl=ja"
+    },
+    {
+        "character": "ら",
+        "romaji": "ra",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ら.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ra&tl=ja"
+    },
+    {
+        "character": "り",
+        "romaji": "ri",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/り.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ri&tl=ja"
+    },
+    {
+        "character": "る",
+        "romaji": "ru",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/る.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ru&tl=ja"
+    },
+    {
+        "character": "れ",
+        "romaji": "re",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/れ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=re&tl=ja"
+    },
+    {
+        "character": "ろ",
+        "romaji": "ro",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ろ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ro&tl=ja"
+    },
+    {
+        "character": "わ",
+        "romaji": "wa",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/わ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=wa&tl=ja"
+    },
+    {
+        "character": "を",
+        "romaji": "wo",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/を.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=wo&tl=ja"
+    },
+    {
+        "character": "ん",
+        "romaji": "n",
+        "type": "hiragana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ん.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=n&tl=ja"
+    },
+    {
+        "character": "ア",
+        "romaji": "a",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ア.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=a&tl=ja"
+    },
+    {
+        "character": "イ",
+        "romaji": "i",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/イ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=i&tl=ja"
+    },
+    {
+        "character": "ウ",
+        "romaji": "u",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ウ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=u&tl=ja"
+    },
+    {
+        "character": "エ",
+        "romaji": "e",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/エ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=e&tl=ja"
+    },
+    {
+        "character": "オ",
+        "romaji": "o",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/オ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=o&tl=ja"
+    },
+    {
+        "character": "カ",
+        "romaji": "ka",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/カ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ka&tl=ja"
+    },
+    {
+        "character": "キ",
+        "romaji": "ki",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/キ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ki&tl=ja"
+    },
+    {
+        "character": "ク",
+        "romaji": "ku",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ク.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ku&tl=ja"
+    },
+    {
+        "character": "ケ",
+        "romaji": "ke",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ケ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ke&tl=ja"
+    },
+    {
+        "character": "コ",
+        "romaji": "ko",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/コ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ko&tl=ja"
+    },
+    {
+        "character": "サ",
+        "romaji": "sa",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/サ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=sa&tl=ja"
+    },
+    {
+        "character": "シ",
+        "romaji": "shi",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/シ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=shi&tl=ja"
+    },
+    {
+        "character": "ス",
+        "romaji": "su",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ス.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=su&tl=ja"
+    },
+    {
+        "character": "セ",
+        "romaji": "se",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/セ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=se&tl=ja"
+    },
+    {
+        "character": "ソ",
+        "romaji": "so",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ソ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=so&tl=ja"
+    },
+    {
+        "character": "タ",
+        "romaji": "ta",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/タ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ta&tl=ja"
+    },
+    {
+        "character": "チ",
+        "romaji": "chi",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/チ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=chi&tl=ja"
+    },
+    {
+        "character": "ツ",
+        "romaji": "tsu",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ツ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=tsu&tl=ja"
+    },
+    {
+        "character": "テ",
+        "romaji": "te",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/テ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=te&tl=ja"
+    },
+    {
+        "character": "ト",
+        "romaji": "to",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ト.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=to&tl=ja"
+    },
+    {
+        "character": "ナ",
+        "romaji": "na",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ナ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=na&tl=ja"
+    },
+    {
+        "character": "ニ",
+        "romaji": "ni",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ニ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ni&tl=ja"
+    },
+    {
+        "character": "ヌ",
+        "romaji": "nu",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヌ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=nu&tl=ja"
+    },
+    {
+        "character": "ネ",
+        "romaji": "ne",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ネ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ne&tl=ja"
+    },
+    {
+        "character": "ノ",
+        "romaji": "no",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ノ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=no&tl=ja"
+    },
+    {
+        "character": "ハ",
+        "romaji": "ha",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ハ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ha&tl=ja"
+    },
+    {
+        "character": "ヒ",
+        "romaji": "hi",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヒ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=hi&tl=ja"
+    },
+    {
+        "character": "フ",
+        "romaji": "fu",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/フ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=fu&tl=ja"
+    },
+    {
+        "character": "ヘ",
+        "romaji": "he",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヘ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=he&tl=ja"
+    },
+    {
+        "character": "ホ",
+        "romaji": "ho",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ホ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ho&tl=ja"
+    },
+    {
+        "character": "マ",
+        "romaji": "ma",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/マ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ma&tl=ja"
+    },
+    {
+        "character": "ミ",
+        "romaji": "mi",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ミ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mi&tl=ja"
+    },
+    {
+        "character": "ム",
+        "romaji": "mu",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ム.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mu&tl=ja"
+    },
+    {
+        "character": "メ",
+        "romaji": "me",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/メ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=me&tl=ja"
+    },
+    {
+        "character": "モ",
+        "romaji": "mo",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/モ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=mo&tl=ja"
+    },
+    {
+        "character": "ヤ",
+        "romaji": "ya",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヤ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ya&tl=ja"
+    },
+    {
+        "character": "ユ",
+        "romaji": "yu",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ユ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=yu&tl=ja"
+    },
+    {
+        "character": "ヨ",
+        "romaji": "yo",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヨ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=yo&tl=ja"
+    },
+    {
+        "character": "ラ",
+        "romaji": "ra",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ラ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ra&tl=ja"
+    },
+    {
+        "character": "リ",
+        "romaji": "ri",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/リ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ri&tl=ja"
+    },
+    {
+        "character": "ル",
+        "romaji": "ru",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ル.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ru&tl=ja"
+    },
+    {
+        "character": "レ",
+        "romaji": "re",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/レ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=re&tl=ja"
+    },
+    {
+        "character": "ロ",
+        "romaji": "ro",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ロ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=ro&tl=ja"
+    },
+    {
+        "character": "ワ",
+        "romaji": "wa",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ワ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=wa&tl=ja"
+    },
+    {
+        "character": "ヲ",
+        "romaji": "wo",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ヲ.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=wo&tl=ja"
+    },
+    {
+        "character": "ン",
+        "romaji": "n",
+        "type": "katakana",
+        "stroke_order": "https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/ン.svg",
+        "audio": "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=n&tl=ja"
+    }
+]
