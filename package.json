@@ -1,0 +1,23 @@
+{
+  "name": "nihongology",
+  "version": "1.0.0",
+  "description": "Japanese Learning website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Mars9563: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@github.com/Mars9563/nihongology.git"
+  },
+  "author": "Mradul Raj Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mars9563/nihongology/issues"
+  },
+  "homepage": "https://github.com/Mars9563/nihongology#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
+  }
+}
