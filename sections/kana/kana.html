@@ -12,6 +12,16 @@
         <div class="container">
             <a class="navbar-brand" href="/">Nihongology</a>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/kana">Kana</a></li>
+                <li class="nav-item"><a class="nav-link" href="/kanji">Kanji</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vocab">Vocabulary</a></li>
+            </ul>
+        </div>
     </nav>
     
     <div class="container mt-4">
@@ -25,8 +35,7 @@
                 </div>
             </aside>
             
-            <!-- Main Content -->
-            <main class="col-md-9">
+            <main class="col-md-6">
                 <ul class="nav nav-tabs" id="kanaTabs">
                     <li class="nav-item">
                         <a class="nav-link active" id="hiragana-tab" data-bs-toggle="tab" href="#hiragana">Hiragana</a>
@@ -45,16 +54,27 @@
                     </div>
                 </div>
             </main>
+            
+            <!-- Kanji Info Box -->
+            <aside class="col-md-3 kanji-info">
+                <div id="kanjiDisplay" class="p-3 border rounded text-center">
+                    <h4 id="kanjiTitle">Select Kana</h4>
+                    <div id="kanjiSvgContainer"></div>
+                    <p id="kanjiDescription" class="mt-2">Hover over a kana to see details.</p>
+                </div>
+            </aside>
         </div>
     </div>
+    
     <!-- jQuery (Must be loaded before kana.js) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- this is for gasp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- Your Kana Script -->
     <script src="kana.js"></script>
-
 </body>
 </html>

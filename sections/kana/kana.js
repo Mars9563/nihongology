@@ -12,7 +12,6 @@ $(document).ready(function () {
             console.error("Error loading kana.json");
         });
 
-    // Function to populate Kana Charts
     function populateCharts() {
         $("#hiraganaChart, #katakanaChart").empty();
 
@@ -77,6 +76,47 @@ $(document).ready(function () {
         createKanaTable(structuredKatakana, "#katakanaChart");
     }
 
+    $(document).on("mouseenter", ".kana-item", function () {
+        let character = $(this).data("character");
+        if (character) {
+            let unicodeHex = character.codePointAt(0).toString(16).toUpperCase(); // Convert to uppercase hex
+            let paddedHex = unicodeHex.padStart(5, "0"); // Ensure 5-digit filenames
+
+            let apiURL = `/api/assets/kanji/${paddedHex}`;// API endpoint
+    
+            $("#kanjiTitle").text(character);
+            $("#kanjiSvgContainer").html("<p>Loading...</p>"); // Show loading text while fetching
+    
+            // Fetch the SVG file via GET request
+            $.get(apiURL)
+                .done(function (svgData, status, xhr) {
+                    console.log("Received SVG Data:", svgData);
+
+                    // Check if the response is a Document, extract the SVG
+                    if (svgData instanceof Document) {
+                        let svgElement = svgData.documentElement; // Extract the <svg> element
+                        $("#kanjiSvgContainer").html(svgElement.outerHTML);
+                        fetchKanaDescription(); // Insert SVG properly
+                        animateKanjiGSAP();
+                    } else {
+                        $("#kanjiSvgContainer").html(svgData); // Fallback
+                    }
+                })
+                .fail(function () {
+                    console.error("Failed to fetch SVG");
+                    $("#kanjiSvgContainer").html("<p>SVG not found</p>");
+                });    
+        }
+    });
+    
+    // Clear box on mouse leave
+    $(document).on("mouseleave", ".kana-item", function () {
+        $("#kanjiTitle").text("Select Kana");
+        $("#kanjiSvgContainer").empty();
+        $("#kanjiDescription").text("Hover over a kana to see details.");
+    });
+    
+
     // Play pronunciation when character is clicked
     $(document).on("click", ".kana-item", function () {
         let character = $(this).data("character");
@@ -86,4 +126,39 @@ $(document).ready(function () {
             speechSynthesis.speak(utterance);
         }
     });
+
+    function animateKanjiGSAP() {
+        let tl = gsap.timeline();
+        
+        $("#kanjiSvgContainer path").each(function (index) {
+            let length = this.getTotalLength();
+            tl.fromTo(this, 
+                { strokeDasharray: length, strokeDashoffset: length },
+                { strokeDashoffset: 0, duration: 1.5, ease: "power2.out" }, 
+                `+=0.5` // Delay each stroke by 0.5s
+            );
+        });
+    }
+    function fetchKanaDescription(kana) {
+        if (!kana) {
+            $("#kanjiDescription").text("Kana not found.");
+            return;
+        }
+    
+        const proxyUrl = "https://corsproxy.io/?";
+        const apiUrl = `https://jisho.org/api/v1/search/words?keyword=${kana}`;
+    
+        $.getJSON(proxyUrl + encodeURIComponent(apiUrl), function (data) {
+            if (data.data.length > 0) {
+                const word = data.data[0].japanese[0].word || kana;
+                const reading = data.data[0].japanese[0].reading;
+                const meaning = data.data[0].senses[0].english_definitions.join(", ");
+                $("#kanjiDescription").text(`${word} (${reading}): ${meaning}`);
+            } else {
+                $("#kanjiDescription").text("No description found.");
+            }
+        }).fail(function () {
+            $("#kanjiDescription").text("Failed to load data.");
+        });
+    }  
 });
