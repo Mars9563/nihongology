@@ -1,0 +1,172 @@
+/* Color Palette */
+:root {
+    --primary-color: #D84040; /* Top red */
+    --secondary-color: #A31D1D; /* Darker red */
+    --accent-color: #ECDCBF; /* Beige */
+    --background-color: #FFF8F2; /* Lightest beige */
+    --text-color: #333; /* Dark text for contrast */
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: calc(100vh - 60px); /* Adjust for navbar height */
+    position: fixed;
+    top: 60px; /* Start below the navbar */
+    left: 0;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.sidebar .list-group {
+    width: 100%;
+}
+
+.sidebar .list-group-item {
+    background: transparent;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    border: none;
+    text-align: center;
+}
+
+.sidebar .list-group-item.active, 
+.sidebar .list-group-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's above everything */
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* JLPT Buttons */
+.jlpt-btn {
+    margin: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.jlpt-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Kanji Content */
+.kanji-content {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.kanji-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.kanji-table th, .kanji-table td {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    text-align: center;
+}
+
+.kanji-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Quiz Section */
+#quiz-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#start-quiz {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start-quiz:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
