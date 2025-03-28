@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Mars9563/nihongology#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
   }
 }
