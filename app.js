@@ -29,9 +29,9 @@ app.get("/api/kana", (req, res) => {
 // this is the get function to fetch the svg data to show in the box
 app.get("/api/assets/kanji/:hex", (req, res) => {
     const hexCode = req.params.hex.toLowerCase(); // Ensure uppercase
-    console.log(hexCode);
+    
     const svgPath = path.join(__dirname, "assets", "kanji", `${hexCode}.svg`);
-    console.log(svgPath);
+    
     // Check if the file exists
     fs.readFile(svgPath, "utf8", (err, data) => {
         if (err) {
