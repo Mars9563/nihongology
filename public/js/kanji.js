@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         let tableHTML = `
-            <table class="table table-bordered mt-3">
+            <table class="table table-bordered mt-3 kanji-table">
                 <thead class="table-dark">
                     <tr>
                         <th>Kanji</th>
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         kanjiList.forEach(kanji => {
             tableHTML += `
                 <tr>
-                    <td>${kanji.literal}</td>
+                    <td class="literal_table_sec">${kanji.literal}</td>
                     <td>${kanji.onyomi || "-"}</td>
                     <td>${kanji.kunyomi || "-"}</td>
                     <td>${kanji.english || "-"}</td>

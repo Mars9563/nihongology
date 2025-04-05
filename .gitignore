@@ -2,3 +2,4 @@ node_modules
 assets/kanji/
 .env
 items for use
+tables_dump.sql
