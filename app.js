@@ -1,11 +1,21 @@
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
-require("dotenv").config();
-const { Pool } = require("pg");
-const app = express();
-const port = 3000;
+import express from "express";
+import path from "path";
+import fs from "fs";
+import dotenv from "dotenv";
+import pg from "pg";
+import { fileURLToPath } from 'url';
 
+const { Pool } = pg;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config();
+
+const app = express();
+app.set('view engine', 'ejs');
+const port = 3000;
+// db auth
 const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -14,29 +24,26 @@ const pool = new Pool({
     port: process.env.DB_PORT,
 });
 
-// Middleware to serve static files
+// serving static files
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "sections/kana")));
-app.use(express.static(path.join(__dirname, "sections/kanji")));
 
-// Route for main page
+// Route to the main page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.render("index.ejs");
 });
 
-// Route for kana page
+// Kana page Route
 app.get("/kana", (req, res) => {
-    res.sendFile(path.join(__dirname, "/sections/kana/kana.html"));
+  res.render("kana.ejs");
 });
-
-// API route to fetch kana data
+// kana page API's
 app.get("/api/kana", (req, res) => {
     res.sendFile(path.join(__dirname, "/data/kana.json"));
 });
 
 // Route for kanji page
 app.get("/kanji", (req, res) => {
-    res.sendFile(path.join(__dirname, "/sections/kanji/kanji.html"));
+  res.render("kanji.ejs");
 });
 
 // API route to fetch kanji levels from the database
@@ -89,13 +96,13 @@ app.get("/api/assets/kanji/:hex", (req, res) => {
     });
 });
 
+
 // Database connection error handling
 pool.on("error", (err) => {
     console.error("Unexpected error on idle client", err);
     process.exit(-1);
 });
-
-// Start the server
-app.listen(port, () => {
-    console.log("Server started at port: " + port);
-});
+// server starting
+app.listen(port, () =>{
+  console.log("server Started at port:" + port);
+} );
