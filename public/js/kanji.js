@@ -13,39 +13,36 @@ document.addEventListener("DOMContentLoaded", function () {
             return {};
         }
     }
-    
     function renderKanjiTable(kanjiList) {
         if (!kanjiList || kanjiList.length === 0) {
             kanjiContent.innerHTML = "<p>No Kanji found for this level.</p>";
             return;
         }
-        
-        let tableHTML = `
-            <table class="table table-bordered mt-3 kanji-table">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Kanji</th>
-                        <th>Onyomi</th>
-                        <th>Kunyomi</th>
-                        <th>English</th>
-                    </tr>
-                </thead>
-                <tbody>
+    
+        kanjiContent.innerHTML = `
+            <div class="scroll-box table-responsive">
+                <table class="table table-bordered mt-3 kanji-table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Kanji</th>
+                            <th>Onyomi</th>
+                            <th>Kunyomi</th>
+                            <th>English</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${kanjiList.map(kanji => `
+                            <tr>
+                                <td class="literal_table_sec">${kanji.literal}</td>
+                                <td>${kanji.onyomi || "-"}</td>
+                                <td>${kanji.kunyomi || "-"}</td>
+                                <td>${kanji.english || "-"}</td>
+                            </tr>
+                        `).join("")}
+                    </tbody>
+                </table>
+            </div>
         `;
-        
-        kanjiList.forEach(kanji => {
-            tableHTML += `
-                <tr>
-                    <td class="literal_table_sec">${kanji.literal}</td>
-                    <td>${kanji.onyomi || "-"}</td>
-                    <td>${kanji.kunyomi || "-"}</td>
-                    <td>${kanji.english || "-"}</td>
-                </tr>
-            `;
-        });
-        
-        tableHTML += "</tbody></table>";
-        kanjiContent.innerHTML = tableHTML;
     }
     
     async function handleJLPTSelection(level) {
