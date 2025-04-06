@@ -4,6 +4,10 @@ import fs from "fs";
 import dotenv from "dotenv";
 import pg from "pg";
 import { fileURLToPath } from 'url';
+import axios from "axios";
+import JishoAPI from 'unofficial-jisho-api';
+
+const jisho = new JishoAPI();
 
 const { Pool } = pg;
 
@@ -46,7 +50,12 @@ app.get("/kanji", (req, res) => {
   res.render("kanji.ejs");
 });
 
-// API route to fetch kanji levels from the database
+// Route for Vocabolary page
+app.get("/vocab", (req,res) =>{
+  res.render("vocab.ejs")
+})
+
+// API route to fetch kanji by levels from the database
 app.get("/api/kanji/levels", async (req, res) => {
     try {
         const query = `
@@ -82,8 +91,9 @@ app.get("/api/kanji/levels", async (req, res) => {
     }
 });
 
-// API route to fetch Kanji SVG assets
+// API route to fetch Kana SVG assets
 app.get("/api/assets/kanji/:hex", (req, res) => {
+  console.log(req.params);
     const hexCode = req.params.hex.toLowerCase();
     const svgPath = path.join(__dirname, "assets", "kanji", `${hexCode}.svg`);
 
@@ -96,6 +106,41 @@ app.get("/api/assets/kanji/:hex", (req, res) => {
     });
 });
 
+
+// jisho api fetch for description
+app.get('/api/jisho/:kana', async (req, res) => {
+  const kana = req.params.kana;
+  try {
+    const data = await jisho.searchForPhrase(kana); // or .scrapeForPhrase(kana) for more data
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch from Jisho" });
+  }
+});
+
+// API route to fetch 10 random sentences for a given kanji
+app.get("/api/kanji/examples/:kanji", async (req, res) => {
+  const kanji = req.params.kanji;
+
+  try {
+    const query = `
+      SELECT sp.jp_sentence, sp.en_sentence
+      FROM kanji_sentence_map ksm
+      JOIN sentence_pairs sp ON ksm.sentence_id = sp.id
+      WHERE ksm.kanji_literal = $1
+      ORDER BY RANDOM()
+      LIMIT 10;
+    `;
+
+    const result = await pool.query(query, [kanji]);
+    
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error fetching kanji examples:", error);
+    res.status(500).json({ error: "Failed to fetch example sentences" });
+  }
+});
 
 // Database connection error handling
 pool.on("error", (err) => {

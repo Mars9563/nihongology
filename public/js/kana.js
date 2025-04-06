@@ -96,7 +96,7 @@ $(document).ready(function () {
                     if (svgData instanceof Document) {
                         let svgElement = svgData.documentElement; // Extract the <svg> element
                         $("#kanjiSvgContainer").html(svgElement.outerHTML);
-                        fetchKanaDescription(); // Insert SVG properly
+                        fetchKanaDescription(character); // Insert SVG properly
                         animateKanjiGSAP();
                     } else {
                         $("#kanjiSvgContainer").html(svgData); // Fallback
@@ -144,11 +144,8 @@ $(document).ready(function () {
             $("#kanjiDescription").text("Kana not found.");
             return;
         }
-    
-        const proxyUrl = "https://corsproxy.io/?";
-        const apiUrl = `https://jisho.org/api/v1/search/words?keyword=${kana}`;
-    
-        $.getJSON(proxyUrl + encodeURIComponent(apiUrl), function (data) {
+        const apiUrl = `/api/jisho/${kana}`;
+        $.getJSON(apiUrl, function (data) {
             if (data.data.length > 0) {
                 const word = data.data[0].japanese[0].word || kana;
                 const reading = data.data[0].japanese[0].reading;

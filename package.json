@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/Mars9563/nihongology#readme",
   "dependencies": {
+    "axios": "^1.8.4",
     "body-parser": "^1.20.3",
+    "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "pg": "^8.14.1"
+    "pg": "^8.14.1",
+    "unofficial-jisho-api": "^2.3.4"
   }
 }

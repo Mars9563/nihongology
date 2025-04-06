@@ -13,12 +13,22 @@
         <div class="container">
             <a class="navbar-brand" href="/">Nihongology</a>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/kana">Kana</a></li>
+                <li class="nav-item"><a class="nav-link" href="/kanji">Kanji</a></li>
+                <li class="nav-item"><a class="nav-link" href="/vocab">Vocabulary</a></li>
+            </ul>
+        </div>
     </nav>
     
     <div class="container mt-0 ms-0">
         <div class="row">
             <!-- Sidebar -->
-            <aside class="col-md-3 sidebar">
+            <aside class="col-md-2 sidebar">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action active" data-section="kanji-section">JLPT Level Selection</a>
                     <a href="#" class="list-group-item list-group-item-action" data-section="quiz-section">Quiz</a>
@@ -26,7 +36,7 @@
             </aside>
 
             <!-- Main Content -->
-            <main class="col-md-9">
+            <main class="col-md-5">
                 <section id="kanji-section">
                     <h2>Select JLPT Level</h2>
                     <div class="btn-group" role="group">
@@ -39,10 +49,44 @@
                 </section>
                 
             </main>
-        </div>
-        <div>
+            <!-- Info Box Section -->
+            <main class="col-md-5  kanji-details-section">
+                <div class="info-box p-3 border rounded kanji-info-box">
+                    <!-- SVG Container -->
+                    <div id="kanjiSVG" class="text-center mb-3 kanji-svg-wrapper">
+                        <p class="text-muted svg-placeholder-text">Click a kanji to view SVG</p>
+                    </div>
             
+                    <!-- Kunyomi / Onyomi -->
+                    <div class="row text-center mb-3 reading-row">
+                        <div class="col reading-block kunyomi-block">
+                            <strong class="reading-label">Kunyomi:</strong>
+                            <div id="kunyomiText" class="reading-value">-</div>
+                        </div>
+                        <div class="col reading-block onyomi-block">
+                            <strong class="reading-label">Onyomi:</strong>
+                            <div id="onyomiText" class="reading-value">-</div>
+                        </div>
+                    </div>
+            
+                    <!-- English Meaning -->
+                    <div class="mb-3 text-center english-block">
+                        <strong class="english-label">English:</strong>
+                        <div id="englishText" class="english-value">-</div>
+                    </div>
+            
+                    <!-- Example Sentences -->
+                    <div class="border p-2 rounded overflow-auto example-sentences-box" style="max-height: 200px;">
+                        <strong class="example-title">Example Sentences:</strong>
+                        <ul id="exampleSentences" class="mb-0 list-unstyled example-sentence-list">
+                            <!-- Example sentences will appear here -->
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
         </div>
+        
     </div>
 
     <!-- Footer -->
@@ -53,6 +97,8 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- this is for gasp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/kanji.js"></script>
 </body>
 </html>
