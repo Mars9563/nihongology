@@ -1,0 +1,380 @@
+/* Color Palette */
+:root {
+    --primary-color: #D84040; /* Top red */
+    --secondary-color: #A31D1D; /* Darker red */
+    --accent-color: #ECDCBF;   /* Beige */
+    --background-color: #FFF8F2; /* Lightest beige */
+    --text-color: #333;        /* Dark text for contrast */
+    --light-background: #F9F5F0; /* Optional soft background */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0 15px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.list-group-item {
+    background: transparent;
+    color: var(--accent-color);
+    border: none;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.list-group-item:hover,
+.list-group-item.active {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+/* Main Content */
+main {
+    margin-bottom: 30px;
+}
+
+/* JLPT Level Buttons */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.jlpt-btn {
+    flex-grow: 1;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.jlpt-btn:hover,
+.jlpt-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Vocab Content */
+.vocab-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+}
+
+/* Vocab Table */
+.vocab-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+}
+
+.vocab-table th,
+.vocab-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.vocab-table th {
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vocab-table td {
+    border-bottom: 1px solid var(--accent-color);
+    transition: background-color 0.3s ease;
+    background-color: white;
+    color: var(--text-color);
+}
+
+.vocab-table tr:nth-child(even) td {
+    background-color: var(--background-color);
+}
+
+.vocab-table tr:hover td {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .jlpt-btn {
+        width: 100%;
+    }
+}
+
+/* Utility Classes */
+.d-none {
+    display: none !important;
+}
+
+/* Japanese Font Style */
+.custom_style {
+    font-size: 2.5rem;
+    font-family: 'Yomogi', sans-serif;
+    color: var(--text-color);
+}
+
+/* Scroll Box */
+.scroll-box {
+    max-height: 900px;
+    overflow-y: auto;
+    padding-right: 10px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    background: white;
+}
+
+/* Vocab SVG Area */
+.vocab-svg-wrapper svg {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Adjust as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Vocab Info Box */
+.vocab-info-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* SVG Placeholder */
+.svg-placeholder-text {
+    font-style: italic;
+    color: #999;
+}
+
+/* Reading Blocks */
+.reading-row {
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding: 15px 0;
+}
+
+.reading-block {
+    padding: 10px 0;
+}
+
+.reading-label {
+    display: block;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.reading-value {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-family: 'Yomogi', sans-serif;
+}
+
+/* English Meaning */
+.english-block {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.english-label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.english-value {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Example Sentences Box */
+.example-sentences-box {
+    background-color: var(--light-background);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 375px;
+    overflow-y: auto;
+    font-size: 1.6rem;
+    font-family: 'Yomogi', sans-serif;
+    margin-top: 15px;
+    font-weight: 100;
+}
+
+.example-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.example-sentence-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+    line-height: 1.5;
+}
+
+.example-sentence-list li:last-child {
+    border-bottom: none;
+}
+
+/* Vocab Character Display Area */
+#vocabCharacterContainer {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vocabCharacterContainer span {
+    margin: 0 5px;
+}
+
+/* Type Block Styling */
+.type-block {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* Quiz Section - Hidden by default */
+#quiz-section {
+    display: none;
+}
+
+/* Selected Vocabulary Row */
+.vocab-row.selected td {
+    background-color: var(--accent-color);
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Character Animation */
+#vocabCharacterContainer span {
+    margin: 0 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#vocabCharacterContainer span:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+/* Loading spinner styles */
+.spinner-border {
+    color: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+}
+
+#vocabCharacterContainer svg{
+    width:150px;
+    height:150px;
+}
+
+.example-sentences-box {
+    background-color: var(--light-background);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 375px;
+    max-height: 375px; /* Add this line */
+    overflow-y: auto;  /* Enables scrolling */
+    font-size: 1.6rem;
+    font-family: 'Yomogi', sans-serif;
+    margin-top: 15px;
+    font-weight: 100;
+}

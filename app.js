@@ -142,6 +142,53 @@ app.get("/api/kanji/examples/:kanji", async (req, res) => {
   }
 });
 
+// API route to fetch vocabulary by JLPT level
+app.get("/api/vocab/level/:level", async (req, res) => {
+  const level = req.params.level.toUpperCase();
+
+  try {
+    const query = `
+      SELECT id, original, furigana, english
+      FROM jlpt_vocab
+      WHERE jlpt_level = $1
+      ORDER BY id;
+    `;
+    const result = await pool.query(query, [level]);
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error fetching vocabulary:", error);
+    res.status(500).json({ error: "Failed to fetch vocabulary data" });
+  }
+});
+
+
+// New experiment
+// Fetch 10 random example sentences for a given vocab ID
+app.get("/api/vocab/examples/:vocabId", async (req, res) => {
+    const vocabId = parseInt(req.params.vocabId);
+
+    if (isNaN(vocabId)) return res.status(400).send("Invalid vocab ID");
+
+    try {
+        const result = await pool.query(`
+            SELECT sp.jp_sentence, sp.en_sentence
+            FROM sentence_pairs sp
+            JOIN sentence_vocab_map svm ON sp.id = svm.sentence_id
+            WHERE svm.vocab_id = $1
+            ORDER BY RANDOM()
+            LIMIT 10;
+        `, [vocabId]);
+
+        res.json(result.rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Server error fetching examples");
+    }
+});
+
+
+
+
 // Database connection error handling
 pool.on("error", (err) => {
     console.error("Unexpected error on idle client", err);
