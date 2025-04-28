@@ -51,9 +51,20 @@ app.get("/kanji", (req, res) => {
 });
 
 // Route for Vocabolary page
-app.get("/vocab", (req,res) =>{
-  res.render("vocab.ejs")
-})
+app.get("/vocab", (req, res) => {
+  res.render("vocab.ejs");
+});
+
+//This is for the kanji quiz section
+app.get("/kanji-quiz", (req, res) => {
+  res.render("kanji-quiz.ejs");
+});
+//
+// This is for the vocab-quiz section
+app.get("/vocab-quiz", (req, res) => {
+  res.render("vocab-quiz.ejs");
+});
+//
 
 // API route to fetch kanji by levels from the database
 app.get("/api/kanji/levels", async (req, res) => {
@@ -93,7 +104,6 @@ app.get("/api/kanji/levels", async (req, res) => {
 
 // API route to fetch Kana SVG assets
 app.get("/api/assets/kanji/:hex", (req, res) => {
-  console.log(req.params);
     const hexCode = req.params.hex.toLowerCase();
     const svgPath = path.join(__dirname, "assets", "kanji", `${hexCode}.svg`);
 
@@ -164,6 +174,7 @@ app.get("/api/vocab/level/:level", async (req, res) => {
 
 // New experiment
 // Fetch 10 random example sentences for a given vocab ID
+// finalized maybe a 2 weeks ago.
 app.get("/api/vocab/examples/:vocabId", async (req, res) => {
     const vocabId = parseInt(req.params.vocabId);
 

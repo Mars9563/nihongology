@@ -1,5 +1,6 @@
 $(document).ready(function () {
     let kanaData = [];
+    let lastClickedKana = null;  // To store the last clicked kana and prevent redundant updates
 
     // Load kana.json
     $.getJSON("api/kana")
@@ -76,13 +77,22 @@ $(document).ready(function () {
         createKanaTable(structuredKatakana, "#katakanaChart");
     }
 
-    $(document).on("mouseenter", ".kana-item", function () {
+    // Handle character click event to update the info box
+    $(document).on("click", ".kana-item", function () {
         let character = $(this).data("character");
+
+        // If the same kana is clicked, do nothing
+        if (character === lastClickedKana) {
+            return;
+        }
+
+        lastClickedKana = character;  // Update the last clicked kana
+
         if (character) {
             let unicodeHex = character.codePointAt(0).toString(16).toUpperCase(); // Convert to uppercase hex
             let paddedHex = unicodeHex.padStart(5, "0"); // Ensure 5-digit filenames
 
-            let apiURL = `/api/assets/kanji/${paddedHex}`;// API endpoint
+            let apiURL = `/api/assets/kanji/${paddedHex}`; // API endpoint
     
             $("#kanjiTitle").text(character);
             $("#kanjiSvgContainer").html("<p>Loading...</p>"); // Show loading text while fetching
@@ -105,17 +115,18 @@ $(document).ready(function () {
                 .fail(function () {
                     console.error("Failed to fetch SVG");
                     $("#kanjiSvgContainer").html("<p>SVG not found</p>");
-                });    
+                });
         }
     });
-    
-    // Clear box on mouse leave
+
+    // Clear box on mouse leave (now only for the text)
     $(document).on("mouseleave", ".kana-item", function () {
-        $("#kanjiTitle").text("Select Kana");
-        $("#kanjiSvgContainer").empty();
-        $("#kanjiDescription").text("Hover over a kana to see details.");
+        if (!lastClickedKana) {
+            $("#kanjiTitle").text("Select Kana");
+            $("#kanjiSvgContainer").empty();
+            $("#kanjiDescription").text("Hover over a kana to see details.");
+        }
     });
-    
 
     // Play pronunciation when character is clicked
     $(document).on("click", ".kana-item", function () {
@@ -128,17 +139,36 @@ $(document).ready(function () {
     });
 
     function animateKanjiGSAP() {
-        let tl = gsap.timeline();
-        
+        let tl = gsap.timeline({
+            onComplete: function () {
+                // Re-enable click to trigger animation again after previous animation is complete
+                $("#kanjiSvgContainer").off("click").on("click", function () {
+                    animateKanjiGSAP();  // Trigger animation again when clicked
+                });
+            }
+        });
+    
+        // Reset any previous strokeDasharray and strokeDashoffset before starting the animation
+        $("#kanjiSvgContainer path").each(function () {
+            let length = this.getTotalLength();
+            $(this).css({ strokeDasharray: length, strokeDashoffset: length });
+        });
+    
+        // Start animating the SVG paths
         $("#kanjiSvgContainer path").each(function (index) {
             let length = this.getTotalLength();
-            tl.fromTo(this, 
-                { strokeDasharray: length, strokeDashoffset: length },
-                { strokeDashoffset: 0, duration: 1.5, ease: "power2.out" }, 
-                `+=0.5` // Delay each stroke by 0.5s
+            tl.fromTo(this,
+                { strokeDasharray: length, strokeDashoffset: length }, // Starting state
+                { strokeDashoffset: 0, duration: 1.5, ease: "power2.out" }, // End state
+                `+=0.5` // Delay each stroke animation by 0.5s
             );
         });
+    
+        // Disable click while animation is running (to prevent re-triggering)
+        $("#kanjiSvgContainer").off("click");
     }
+
+
     function fetchKanaDescription(kana) {
         if (!kana) {
             $("#kanjiDescription").text("Kana not found.");
@@ -157,5 +187,5 @@ $(document).ready(function () {
         }).fail(function () {
             $("#kanjiDescription").text("Failed to load data.");
         });
-    }  
+    }
 });

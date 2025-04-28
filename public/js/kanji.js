@@ -59,11 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     
     jlptButtons.forEach(button => {
         button.addEventListener("click", function () {
-            let selectedLevel = button.textContent.replace("JLPT ", "");
-            console.log("Clicked level:", selectedLevel); 
+          let selectedLevel = button.value;
             jlptButtons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-            if (selectedLevel === "N4/N5") {selectedLevel = "N4"}
+          button.classList.add("active");
             handleJLPTSelection(selectedLevel);
         });
     });

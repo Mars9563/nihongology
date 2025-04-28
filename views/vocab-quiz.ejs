@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Quiz - Nihongology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/vocab-quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-torii-gate me-2"></i>Nihongology
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/kana"><i class="fas fa-font me-1"></i>Kana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/kanji"><i class="fas fa-kanji me-1"></i>Kanji</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/vocab"><i class="fas fa-book me-1"></i>Vocabulary</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-md-3 col-lg-2 sidebar">
+                <div class="list-group">
+                    <a href="/vocab" class="list-group-item list-group-item-action" data-section="vocab-section">
+                        <i class="fas fa-list me-2"></i>JLPT Levels
+                    </a> 
+                    <a href="/vocab-quiz" class="list-group-item list-group-item-action active" data-section="quiz-section">
+                        <i class="fas fa-graduation-cap me-2"></i>Quiz
+                    </a>
+                </div>
+                
+                <div class="sidebar-info">
+                    <h5 class="mb-3"><i class="fas fa-lightbulb me-2"></i>Quiz Tips</h5>
+                    <p class="small">Test your vocabulary knowledge across different categories and JLPT levels. Regular quizzing improves recall and retention!</p>
+                    
+                    <div class="achievement-section">
+                        <h6><i class="fas fa-trophy me-2"></i> Your Stats</h6>
+                        <div class="achievement-item">
+                            <span>Quizzes Taken:</span>
+                            <span class="badge bg-primary" id="quizzes-taken">0</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span>Avg. Score:</span>
+                            <span class="badge bg-success" id="avg-score">0%</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span>Streak:</span>
+                            <span class="badge bg-warning" id="current-streak">0 days</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10">
+                <div class="quiz-page-wrapper">
+                    <div class="quiz-header text-center">
+                        <h1 class="display-5">語彙クイズ</h1>
+                        <p class="lead">Test your Japanese vocabulary knowledge</p>
+                        <div class="decorative-line"></div>
+                    </div>
+                    
+                    <!-- Quiz Container -->
+                    <div class="quiz-container fade-in">
+                        <div class="quiz-card">
+                            <!-- Quiz Settings -->
+                            <div class="quiz-settings">
+                                <h2><i class="fas fa-cog me-2"></i> Quiz Settings</h2>
+                                
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="setting-block">
+                                            <label for="level-select" class="form-label">Select JLPT Level</label>
+                                            <select id="level-select" class="form-select">
+                                                <option value="n5">JLPT N5</option>
+                                                <option value="n4">JLPT N4</option>
+                                                <option value="n3">JLPT N3</option>
+                                                <option value="n2">JLPT N2</option>
+                                                <option value="n1">JLPT N1</option>
+                                            </select>
+                                            <div id="level-description" class="level-description">
+                                                <strong>N5:</strong> Basic vocabulary for beginners
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="setting-block">
+                                            <label for="question-count" class="form-label">Number of Questions</label>
+                                            <div class="range-container">
+                                                <input type="range" id="question-count" class="form-range" min="5" max="50" value="10" oninput="this.nextElementSibling.value = this.value">
+                                                <output>10</output> questions
+                                            </div>
+                                            <div class="question-suggestion">
+                                                We recommend 10-20 questions per session
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="quiz-type-selection mt-3">
+                                    <h5>Quiz Format</h5>
+                                    <div class="quiz-type-options">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="quizType" id="jp-to-en" value="jp-to-en" checked>
+                                            <label class="form-check-label" for="jp-to-en">Japanese → English</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="quizType" id="en-to-jp" value="en-to-jp">
+                                            <label class="form-check-label" for="en-to-jp">English → Japanese</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-primary quiz-btn" id="start-quiz">
+                                        <i class="fas fa-play-circle me-2"></i>Start Quiz
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Quiz Area -->
+                            <div id="quiz-area" class="text-center d-none">
+                                <div class="quiz-progress">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="question-counter">Question 1/10</span>
+                                        <span class="score-counter">Score: 0</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="vocab-display-area">
+                                    <div id="quiz-word" class="fade-in"></div>
+                                    <div id="quiz-reading" class="reading-display d-none"></div>
+                                    <button id="audio-button" class="btn btn-sm btn-outline-primary audio-btn d-none">
+                                        <i class="fas fa-volume-up"></i> Listen
+                                    </button>
+                                </div>
+                                
+                                <div id="quiz-options" class="options-grid fade-in">
+                                    <!-- Options will be added here dynamically -->
+                                </div>
+                                
+                                <div class="feedback-area d-none" id="feedback-area">
+                                    <!-- Feedback message will go here -->
+                                </div>
+                                
+                                <button class="btn btn-primary quiz-btn d-none" id="next-question">
+                                    Next Question <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Result Section -->
+                            <div id="quiz-result" class="text-center d-none">
+                                <div class="result-header">
+                                    <i class="fas fa-award result-icon"></i>
+                                    <h3>Quiz Complete!</h3>
+                                </div>
+                                
+                                <div class="result-stats">
+                                    <div class="score-display">
+                                        <div class="score-circle">
+                                            <span id="score-percentage">80%</span>
+                                        </div>
+                                    </div>
+                                    <h4 id="score-text">You scored 8 out of 10!</h4>
+                                    <p class="result-message" id="result-message">Great job! You're building your vocabulary nicely.</p>
+                                </div>
+                                
+                                <div class="result-actions">
+                                    <button class="btn btn-primary quiz-btn" id="restart-quiz">
+                                        <i class="fas fa-redo me-2"></i>Try Again
+                                    </button>
+                                    <button class="btn btn-outline-primary" id="review-mistakes">
+                                        <i class="fas fa-search me-2"></i>Review Mistakes
+                                    </button>
+                                </div>
+                                
+                                <div id="mistake-review" class="mistake-review d-none">
+                                    <h5 class="review-title">Vocabulary to Review</h5>
+                                    <div class="review-items">
+                                        <!-- Mistake items will be added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-footer">
+                            <div class="info-card">
+                                <h5><i class="fas fa-brain me-2"></i> Learning Tip</h5>
+                                <p>Learn vocabulary in context rather than isolated words. Using new words in sentences makes them easier to remember and use naturally.</p>
+                            </div>
+                            <div class="info-card">
+                                <h5><i class="fas fa-layer-group me-2"></i> Spaced Repetition</h5>
+                                <p>Review new vocabulary at increasing intervals: first after one day, then three days, then a week. This method optimizes long-term memory retention.</p>
+                            </div>
+                            <div class="info-card">
+                                <h5><i class="fas fa-puzzle-piece me-2"></i> Word Associations</h5>
+                                <p>Group related vocabulary by themes or situations. Creating these connections helps your brain build stronger neural pathways for faster recall.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>© 2025 Nihongology - The modern way to learn Japanese</p>
+            <div class="social-links mt-3">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/vocab-quiz.js"></script>
+</body>
+</html>
